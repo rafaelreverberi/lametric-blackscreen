@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy – BlackScreen for LaMetric</title>
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{
+      --bg1:#0b1020; --bg2:#0a142a; --bg3:#101a36;
+      --card:rgba(255,255,255,.08);
+      --stroke:rgba(255,255,255,.15);
+      --text:#eef1f7;
+      --muted:#b7c0d4;
+      --link:#7aa2ff;
+      --glow:rgba(122,162,255,.35);
+      --radius:24px;
+    }
+
+    /* Page baseline */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 20% 0%, #1b2440 0%, transparent 60%),
+                  radial-gradient(800px 600px at 100% 100%, #19213d 0%, transparent 60%),
+                  linear-gradient(135deg, var(--bg1), var(--bg2) 40%, var(--bg3));
+      overflow-x:hidden;
+    }
+
+    /* Animated background orbs (very subtle) */
+    .orb{
+      position: fixed; inset: 0; z-index: -1; filter: blur(60px);
+      background:
+        radial-gradient(220px 200px at var(--x1,15%) var(--y1,20%), rgba(110,160,255,.25), transparent 60%),
+        radial-gradient(260px 220px at var(--x2,85%) var(--y2,10%), rgba(140,255,210,.18), transparent 65%),
+        radial-gradient(300px 260px at var(--x3,50%) var(--y3,85%), rgba(255,160,200,.12), transparent 65%);
+      animation: drift 22s ease-in-out infinite alternate;
+    }
+    @keyframes drift{
+      0%   { --x1:18%; --y1:18%; --x2:82%; --y2:12%; --x3:52%; --y3:78%; }
+      100% { --x1:22%; --y1:26%; --x2:88%; --y2:18%; --x3:46%; --y3:86%; }
+    }
+
+    /* Center container */
+    .wrap{
+      min-height:100%;
+      display:grid;
+      place-items:center;
+      padding:56px 20px;
+    }
+
+    /* Card */
+    .card{
+      width:min(860px, 92vw);
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      box-shadow:
+        0 30px 80px rgba(0,0,0,.45),
+        0 0 120px 20px var(--glow) inset;
+      backdrop-filter: blur(14px) saturate(130%);
+      -webkit-backdrop-filter: blur(14px) saturate(130%);
+      padding: clamp(22px, 4vw, 40px);
+      transform: translateY(8px);
+      animation: rise .8s cubic-bezier(.2,.8,.2,1) .15s both;
+    }
+    @keyframes rise { from { opacity:0; transform: translateY(24px) } to { opacity:1; transform: translateY(8px) } }
+
+    /* Typography */
+    h1{ margin:0 0 .35em; font-size: clamp(26px, 3.2vw, 36px); line-height:1.2; letter-spacing:.2px; }
+    h2{ margin:1.8em 0 .6em; font-size: clamp(18px, 2.2vw, 22px); }
+    p{ margin:.85em 0; color:var(--text); }
+    ul{ margin:.6em 0 1.2em 1.1em; padding:0; }
+    li{ margin:.35em 0; color:var(--text); }
+    .muted{ color:var(--muted); }
+
+    a{ color:var(--link); text-decoration:none; position:relative; }
+    a::after{ content:""; position:absolute; left:0; right:0; bottom:-2px; height:1px; background: currentColor; opacity:.25; transform: scaleX(0); transform-origin:left; transition:transform .25s ease; }
+    a:hover::after{ transform: scaleX(1); }
+
+    /* Header row */
+    .head{
+      display:flex; align-items:center; gap:14px; margin-bottom:12px;
+    }
+    .badge{
+      padding:6px 10px; border:1px solid var(--stroke);
+      border-radius:999px; font-size:12px; color:var(--muted);
+      background: rgba(255,255,255,.06);
+    }
+
+    /* Footer */
+    .footer{
+      margin-top:22px; padding-top:16px;
+      border-top:1px dashed var(--stroke);
+      display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;
+    }
+    .mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; }
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:12px;
+      border:1px solid var(--stroke);
+      background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
+      color:var(--text); text-decoration:none; transition: transform .15s ease, box-shadow .15s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 12px 26px rgba(0,0,0,.28); }
+
+    /* Print / reduce motion */
+    @media (prefers-reduced-motion: reduce){
+      .orb{ animation: none; }
+      .card{ animation: none; }
+    }
+    @media print{
+      .orb{ display:none; }
+      body{ background:#fff; color:#000; }
+      .card{ box-shadow:none; backdrop-filter:none; -webkit-backdrop-filter:none; border-color:#ccc; }
+      a{ color:#000; text-decoration:underline; }
+    }
+  </style>
+</head>
+<body>
+  <div class="orb" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <article class="card" role="article" aria-labelledby="title">
+      <div class="head">
+        <span class="badge">BlackScreen for LaMetric</span>
+        <span class="badge">Privacy Policy</span>
+      </div>
+
+      <h1 id="title">Privacy Policy</h1>
+      <p class="muted"><strong>Effective date:</strong> <span class="mono">2025-08-31</span></p>
+
+      <h2>Who we are</h2>
+      <p><strong>BlackScreen</strong> is a minimal LaMetric app that displays a completely black screen. It is designed for users who want zero distractions and a dimmed display.</p>
+
+      <h2>What data we process</h2>
+      <ul>
+        <li>The app does <strong>not</strong> collect, store, or process any personal data.</li>
+        <li>No cookies, trackers, analytics, or profiling are used.</li>
+        <li>The app fetches a <strong>static JSON file</strong> hosted on GitHub Pages which defines an empty frame. This file contains <strong>no personal information</strong>.</li>
+      </ul>
+
+      <h2>Purpose of processing</h2>
+      <p>The sole purpose of the app is to show a black screen on the LaMetric device.</p>
+
+      <h2>Contact</h2>
+      <p>
+        If you have any questions, feedback, or concerns regarding this Privacy Policy, you are welcome to reach out through the following channels:
+      </p>
+      <ul>
+        <li>
+          Via the official website contact form:<br>
+          <a href="https://rafaelreverberi.vercel.app/en/contact" target="_blank" rel="noopener">https://rafaelreverberi.vercel.app/en/contact</a>
+        </li>
+        <li>
+          By opening an issue on GitHub:<br>
+          <a href="https://github.com/rafaelreverberi/lametric-blackscreen-json" target="_blank" rel="noopener">Project repository</a>
+        </li>
+      </ul>
+      <p class="muted">
+        The developer aims to respond to inquiries in a timely and transparent manner.
+      </p>
+
+      <footer class="footer">
+        <span class="muted">© <span class="mono">2025</span> BlackScreen – No data collected.</span>
+        <a class="btn" href="index.json">View JSON</a>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
