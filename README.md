@@ -9,12 +9,12 @@ This app is built for those who want to hide the display during the night, deep 
 ## How it works
 
 The app fetches a simple [`index.json`](./index.json) file hosted on GitHub Pages  
-[View live JSON](https://rafaelreverberi.github.io/lametric-blackscreen-json/index.json)
+[View live JSON](https://rafaelreverberi.github.io/lametric-blackscreen/index.json)
 
 This JSON instructs the LaMetric to render a blank black frame.
 
 A [`privacy.html`](./privacy.html) page is also included  
-[View live privacy page](https://rafaelreverberi.github.io/lametric-blackscreen-json/privacy.html)
+[View live privacy page](https://rafaelreverberi.github.io/lametric-blackscreen/privacy.html)
 
 Both files are part of this repository and are served via GitHub Pages.
 
@@ -40,7 +40,7 @@ Both files are part of this repository and are served via GitHub Pages.
 ## Privacy
 
 The app comes with a [`privacy.html`](./privacy.html) page  
-[View live privacy page](https://rafaelreverberi.github.io/lametric-blackscreen-json/privacy.html)
+[View live privacy page](https://rafaelreverberi.github.io/lametric-blackscreen/privacy.html)
 
 - No personal data is collected.  
 - No analytics, no ads, no tracking.  
