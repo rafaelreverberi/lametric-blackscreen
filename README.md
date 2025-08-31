@@ -9,12 +9,12 @@ This app is built for those who want to hide the display during the night, deep 
 ## How it works
 
 The app fetches a simple [`index.json`](./index.json) file hosted on GitHub Pages  
-[View live JSON](https://YOUR_USERNAME.github.io/REPO_NAME/index.json)
+[View live JSON](https://rafaelreverberi.github.io/lametric-blackscreen-json/index.json)
 
 This JSON instructs the LaMetric to render a blank black frame.
 
 A [`privacy.html`](./privacy.html) page is also included  
-[View live privacy page](https://YOUR_USERNAME.github.io/REPO_NAME/privacy.html)
+[View live privacy page](https://rafaelreverberi.github.io/lametric-blackscreen-json/privacy.html)
 
 Both files are part of this repository and are served via GitHub Pages.
 
@@ -31,7 +31,7 @@ Both files are part of this repository and are served via GitHub Pages.
 
 ## Installation
 
-1. Install BlackScreen directly from the [LaMetric App Store](https://apps.lametric.com/apps/blackscreen/YOUR_APP_ID).  
+1. Install BlackScreen directly from the [LaMetric App Store](https://apps.lametric.com/apps/blackscreen/15495).  
 2. The app will automatically fetch the [`index.json`](./index.json) from GitHub Pages.  
 3. Your LaMetric will instantly display a black screen.  
 
@@ -40,7 +40,7 @@ Both files are part of this repository and are served via GitHub Pages.
 ## Privacy
 
 The app comes with a [`privacy.html`](./privacy.html) page  
-[View live privacy page](https://YOUR_USERNAME.github.io/REPO_NAME/privacy.html)
+[View live privacy page](https://rafaelreverberi.github.io/lametric-blackscreen-json/privacy.html)
 
 - No personal data is collected.  
 - No analytics, no ads, no tracking.  
@@ -56,4 +56,4 @@ Feel free to open issues or submit pull requests. Improvements to documentation,
 
 ## License
 
-[MIT License](./LICENSE) © Rafael Reverberi
+[MIT License](./LICENSE.md) © Rafael Reverberi
